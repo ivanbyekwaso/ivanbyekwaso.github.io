@@ -5,22 +5,11 @@ body {
   color:white;
 }
 
-/* FADE */
-.fade-in {
-  animation:fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-
 /* HEADER */
 header {
   position:sticky;
   top:0;
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(10px);
+  background:black;
   padding:15px;
   text-align:center;
 }
@@ -31,12 +20,12 @@ header {
 
 /* SECTIONS */
 section {
-  padding:140px 20px;
+  padding:120px 20px;
   max-width:900px;
   margin:auto;
 }
 
-/* 🔥 FLOATING WHATSAPP (GLASS STYLE) */
+/* 🔥 WHATSAPP BUTTON (FINAL) */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -52,19 +41,20 @@ section {
   border-radius:50%;
 
   background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-
   border:1px solid rgba(255,255,255,0.2);
 
   text-decoration:none;
+  color:white;
+
+  font-size:26px;
 
   transition:0.3s;
 }
 
-/* SIMPLE ICON */
-.wa-icon {
-  font-size:22px;
-  color:white;
+/* REMOVE ANY LINE */
+.floating-whatsapp i {
+  text-decoration:none !important;
+  border:none !important;
 }
 
 /* HOVER */
@@ -76,14 +66,13 @@ section {
 /* SERVICES */
 .service {
   position:relative;
-  margin:140px auto;
+  margin:120px auto;
   overflow:hidden;
   border-radius:20px;
 }
 
 .service img {
   width:100%;
-  transition:0.5s;
 }
 
 .overlay {
@@ -97,25 +86,19 @@ section {
   align-items:center;
   justify-content:center;
   opacity:0;
-  transition:0.5s;
-}
-
-.service:hover img {
-  transform:scale(1.1);
+  transition:0.4s;
 }
 
 .service:hover .overlay {
   opacity:1;
 }
 
-/* 🔥 TRANSPARENT BUTTON */
+/* BUTTON */
 .btn {
   display:inline-block;
   padding:14px 30px;
 
   background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(10px);
-
   border:1px solid rgba(255,255,255,0.2);
 
   border-radius:30px;
@@ -123,39 +106,12 @@ section {
   color:white;
   text-decoration:none;
 
-  margin-top:40px;
-
-  transition:0.3s;
-}
-
-/* BUTTON HOVER */
-.btn:hover {
-  background:#25D366;
-  transform:scale(1.08);
-}
-
-/* TRUST */
-.trust-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap:40px;
+  margin-top:30px;
 }
 
 /* CTA */
 .cta {
   background:#111;
   border-radius:20px;
-  padding:100px 20px;
-}
-
-/* ANIMATION */
-.reveal {
-  opacity:0;
-  transform:translateY(120px);
-  transition:1.2s ease;
-}
-
-.reveal.active {
-  opacity:1;
-  transform:translateY(0);
+  padding:80px 20px;
 }
