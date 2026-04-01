@@ -3,7 +3,7 @@ function openLearnMore() {
 }
 
 function setLang(lang) {
-  // ready for future bilingual expansion
+  // ready for future expansion
 }
 
 function revealElements() {
