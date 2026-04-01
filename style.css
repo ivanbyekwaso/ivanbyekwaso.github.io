@@ -64,22 +64,6 @@ section {
   transform:translateY(0);
 }
 
-/* learn page */
-.learn-hero {
-  padding:100px 20px;
-  background:black;
-}
-
-.learn-block {
-  margin:100px auto;
-  max-width:700px;
-}
-
-.learn-block img {
-  width:100%;
-  border-radius:20px;
-  margin-bottom:20px;
-}
 /* BLOG STYLE LEARN PAGE */
 
 .learn-content {
@@ -101,4 +85,9 @@ section {
   line-height:1.8;
   font-size:18px;
   margin-bottom:40px;
+}
+
+.learn-hero {
+  padding:100px 20px;
+  background:black;
 }
