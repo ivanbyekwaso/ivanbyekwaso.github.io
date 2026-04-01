@@ -26,14 +26,22 @@ section {
   font-size:42px;
 }
 
-.whatsapp, .learn-btn {
+/* 🔥 BUTTON STYLE */
+.btn {
   display:inline-block;
   margin-top:20px;
-  padding:15px 25px;
+  padding:15px 30px;
   background:#25D366;
-  border-radius:30px;
   color:white;
+  border-radius:30px;
   text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#1ebe5d;
+  transform:scale(1.05);
 }
 
 .service {
