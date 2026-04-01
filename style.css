@@ -43,25 +43,44 @@ section {
   font-size:42px;
 }
 
-/* FLOATING WHATSAPP */
+/* 🔥 FLOATING WHATSAPP FIXED */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
+
   width:60px;
   height:60px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   font-size:26px;
+
   border-radius:50%;
+
   background:rgba(255,255,255,0.08);
   backdrop-filter:blur(12px);
+
   border:1px solid rgba(255,255,255,0.2);
+
   color:white;
+
+  text-decoration:none; /* ✅ REMOVE UNDERLINE */
+  outline:none;         /* ✅ REMOVE FOCUS LINE */
+
   transition:all 0.3s ease;
+
+  z-index:999;
 }
 
+/* also ensure icon itself has no underline */
+.floating-whatsapp i {
+  text-decoration:none;
+}
+
+/* hover */
 .floating-whatsapp:hover {
   background:#25D366;
   transform:scale(1.15);
@@ -83,7 +102,7 @@ section {
   transition:0.5s;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .overlay {
   position:absolute;
   top:0;
@@ -141,7 +160,7 @@ section {
   padding:100px 20px;
 }
 
-/* SCROLL ANIMATION */
+/* ANIMATION */
 .reveal {
   opacity:0;
   transform:translateY(120px);
