@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll(".section");
 const whatsapp = document.querySelector(".floating-whatsapp");
+const bottomSection = document.getElementById("bottom-cta");
 
 function handleScroll() {
 
@@ -11,11 +12,10 @@ function handleScroll() {
     }
   });
 
-  // CTA EXPANSION
-  const scrollBottom = window.innerHeight + window.scrollY;
-  const pageHeight = document.body.offsetHeight;
+  // CTA POSITION
+  const bottomTop = bottomSection.getBoundingClientRect().top;
 
-  if (scrollBottom >= pageHeight - 50) {
+  if (bottomTop < window.innerHeight - 100) {
     whatsapp.classList.add("expanded");
   } else {
     whatsapp.classList.remove("expanded");
