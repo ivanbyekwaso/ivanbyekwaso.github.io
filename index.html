@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ivan Byekwaso | Elite Coaching</title>
+
+<title>Ivan Byekwaso</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
@@ -13,7 +17,10 @@
 <body>
 
 <header>
-  <h1>Ivan Byekwaso</h1>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+
   <div class="lang">
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('de')">DE</button>
@@ -21,8 +28,8 @@
 </header>
 
 <section class="hero reveal">
-  <h2 id="title">Elite Personal Coaching</h2>
-  <p id="subtitle">Transform your body, mindset and performance</p>
+  <h2>Elite Personal Coaching</h2>
+  <p>Transform your body, mindset and performance</p>
 
   <a class="whatsapp" href="https://wa.me/4915566238085" target="_blank">
     <i class="fab fa-whatsapp"></i> Contact on WhatsApp
@@ -30,84 +37,33 @@
 </section>
 
 <section class="services">
-  <h2 data-en="Training Services" data-de="Trainingsangebote">Training Services</h2>
 
   <div class="service reveal">
     <img src="service1.jpg">
-    <h3 data-en="Individual Coaching" data-de="Individuelles Coaching">Individual Coaching</h3>
+    <h3>Individual Coaching</h3>
   </div>
 
   <div class="service reveal">
     <img src="service2.jpg">
-    <h3 data-en="1-on-1 Training" data-de="Einzeltraining">1-on-1 Training</h3>
+    <h3>1-on-1 Training</h3>
   </div>
 
   <div class="service reveal">
     <img src="service3.jpg">
-    <h3 data-en="Group Training" data-de="Gruppentraining">Group Training</h3>
+    <h3>Group Training</h3>
   </div>
 
   <div class="service reveal">
     <img src="service4.jpg">
-    <h3 data-en="Long-term Programs" data-de="Langfristige Programme">Long-term Programs</h3>
+    <h3>Long-term Programs</h3>
   </div>
+
 </section>
 
 <section class="about reveal">
-  <h2 data-en="About Ivan" data-de="Über Ivan">About Ivan</h2>
+  <h2>About Ivan</h2>
 
-  <button onclick="toggleLearn()">Learn More</button>
-
-  <div id="learnMore" class="hidden">
-
-    <img src="ivan1.jpg" class="about-img">
-    <img src="ivan2.jpg" class="about-img">
-
-    <p>
-Ivan Byekwaso, widely known as “Mr Uganda”, is a 5-time Mr Uganda Champion and internationally recognized natural bodybuilder.
-
-Born on September 29, 1983 in Jinja, Uganda, Ivan developed his passion for sports at an early age. He began playing football during his school years, earning bursaries that supported his education and eventually leading him to trial for the Uganda U20 National Team as a goalkeeper.
-
-His transformation into bodybuilding began while working as a security professional (bouncer) in Kampala. During this time, he developed an impressive physique, which became the foundation for his future career.
-
-Inspired by global icons such as Arnold Schwarzenegger, Sylvester Stallone (Rambo), and Jean-Claude Van Damme, Ivan committed himself to discipline, consistency, and high-performance training.
-
-At the age of 22, he entered his first bodybuilding competition — Mr Uganda — and won first place in the junior category. This marked the beginning of an extraordinary journey.
-
-Ivan went on to dominate the bodybuilding scene:
-- 5x Mr Uganda Champion  
-- 4x Mr Kampala Champion  
-- Record holder in Ugandan bodybuilding history  
-
-He later expanded internationally, competing across the world and achieving major success:
-
-- Overall Winner – INBA/PNBA World Cup (Los Angeles, USA, 2024)  
-- Overall Winner – Natural Olympia Masters (Las Vegas, USA, 2024)  
-- Overall Winner – Natural Universe (Texas, USA, 2015)  
-- Overall Winner – World Cup (San Diego, USA, 2015)  
-- Silver Medal – INBA World Championships (Slovakia, 2014)  
-- Bronze Medal – Natural Olympia (San Diego, USA, 2014)  
-
-Today, Ivan is a professional natural bodybuilder and elite personal coach, dedicated to helping individuals transform their bodies and lives.
-
-He works with beginners, advanced athletes, men and women of all ages, and bodybuilders preparing for competition.
-
-His coaching focuses on strength, weight loss, muscle gain, flexibility, endurance, performance training, and nutrition planning.
-
-Ivan offers flexible training options — at home, in the gym, outdoors, or in small personal spaces.
-
-Languages spoken: English, German, Luganda, Lusoga, Kiswahili.
-    </p>
-
-  </div>
-</section>
-
-<section class="booking reveal">
-  <h2>Book Your Training</h2>
-
-  <a class="book-btn" href="https://wa.me/4915566238085" target="_blank">
-    Book via WhatsApp
-  </a>
+  <button onclick="openLearnMore()">Learn More</button>
 </section>
 
 <section class="contact reveal">
