@@ -3,7 +3,7 @@ body {
   font-family:'Poppins', sans-serif;
   background:#0a0a0a;
   color:white;
-  scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 
 /* HEADER */
@@ -22,6 +22,15 @@ header {
   max-width:1000px;
   margin:auto;
   text-align:center;
+
+  opacity:0;
+  transform:translateY(80px);
+  transition:1s ease;
+}
+
+.section.show {
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* GRID */
@@ -32,32 +41,24 @@ header {
 
 /* CARDS */
 .card {
-  opacity:0;
-  transform:translateY(60px);
-  transition:all 0.8s ease;
-}
-
-.card.show {
-  opacity:1;
-  transform:translateY(0);
-}
-
-.card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition:0.4s ease;
 }
 
 .card img {
   width:100%;
   border-radius:20px;
-  transition:transform 0.5s ease;
+  transition:0.5s ease;
+}
+
+.card:hover {
+  transform:translateY(-12px);
 }
 
 .card:hover img {
   transform:scale(1.08);
 }
 
-/* BUTTON (GLASS ONLY — NO GREEN) */
+/* BUTTON (GLASS) */
 .btn {
   display:inline-block;
   margin-top:20px;
@@ -66,17 +67,16 @@ header {
   border:1px solid rgba(255,255,255,0.3);
   background:rgba(255,255,255,0.08);
   backdrop-filter:blur(10px);
-  text-decoration:none;
   color:white;
-  transition:all 0.3s ease;
+  text-decoration:none;
+  transition:0.3s;
 }
 
 .btn:hover {
-  transform:scale(1.05);
   background:rgba(255,255,255,0.15);
 }
 
-/* WHATSAPP FLOATING */
+/* 🔥 WHATSAPP BUTTON */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -96,8 +96,9 @@ header {
 
   border:1px solid rgba(255,255,255,0.2);
 
-  transition:all 0.3s ease;
+  transition:all 0.4s ease;
 
+  overflow:hidden;
   z-index:999;
 }
 
@@ -106,19 +107,34 @@ header {
   height:28px;
 }
 
-.floating-whatsapp:hover {
-  background:#25D366;
-  transform:scale(1.15);
-}
-
-/* SECTION ANIMATION */
-.section {
+/* TEXT */
+.cta-text {
   opacity:0;
-  transform:translateY(80px);
-  transition:1s;
+  margin-left:10px;
+  white-space:nowrap;
+  transition:0.3s;
 }
 
-.section.show {
+/* EXPANDED CTA */
+.floating-whatsapp.expanded {
+  width:260px;
+  border-radius:30px;
+  justify-content:flex-start;
+  padding:0 20px;
+  background:#25D366;
+}
+
+.floating-whatsapp.expanded .cta-text {
   opacity:1;
-  transform:translateY(0);
+}
+
+/* FLOAT EFFECT */
+.floating-whatsapp {
+  animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform:translateY(0); }
+  50% { transform:translateY(-6px); }
+  100% { transform:translateY(0); }
 }
