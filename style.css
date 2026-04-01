@@ -37,15 +37,9 @@ header {
   transition:all 0.8s ease;
 }
 
-/* SHOW ANIMATION */
 .card.show {
   opacity:1;
   transform:translateY(0);
-}
-
-/* HOVER EFFECT */
-.card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card:hover {
@@ -53,7 +47,6 @@ header {
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-/* IMAGE */
 .card img {
   width:100%;
   border-radius:20px;
@@ -64,41 +57,68 @@ header {
   transform:scale(1.08);
 }
 
-/* BUTTON */
+/* BUTTON (GLASS ONLY — NO GREEN) */
 .btn {
   display:inline-block;
   margin-top:20px;
   padding:12px 25px;
   border-radius:30px;
   border:1px solid rgba(255,255,255,0.3);
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
   text-decoration:none;
   color:white;
   transition:all 0.3s ease;
 }
 
 .btn:hover {
-  background:#25D366;
-  transform:scale(1.08);
+  transform:scale(1.05);
+  background:rgba(255,255,255,0.15);
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOATING */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
+
   width:60px;
   height:60px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   border-radius:50%;
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(10px);
+
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+
   border:1px solid rgba(255,255,255,0.2);
+
   transition:all 0.3s ease;
+
+  z-index:999;
+}
+
+.floating-whatsapp svg {
+  width:28px;
+  height:28px;
 }
 
 .floating-whatsapp:hover {
   background:#25D366;
   transform:scale(1.15);
+}
+
+/* SECTION ANIMATION */
+.section {
+  opacity:0;
+  transform:translateY(80px);
+  transition:1s;
+}
+
+.section.show {
+  opacity:1;
+  transform:translateY(0);
 }
