@@ -6,7 +6,7 @@ body {
   scroll-behavior:smooth;
 }
 
-/* PAGE FADE */
+/* FADE */
 .fade-in {
   animation:fadeIn 0.8s ease;
 }
@@ -24,7 +24,6 @@ header {
   backdrop-filter:blur(10px);
   padding:15px;
   text-align:center;
-  z-index:1000;
 }
 
 .logo img {
@@ -38,49 +37,29 @@ section {
   margin:auto;
 }
 
-/* HERO */
-.hero h2 {
-  font-size:42px;
-}
-
-/* 🔥 FLOATING WHATSAPP FIXED */
+/* WHATSAPP BUTTON */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
-
   width:60px;
   height:60px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
-  font-size:26px;
-
   border-radius:50%;
-
   background:rgba(255,255,255,0.08);
   backdrop-filter:blur(12px);
-
   border:1px solid rgba(255,255,255,0.2);
-
-  color:white;
-
-  text-decoration:none; /* ✅ REMOVE UNDERLINE */
-  outline:none;         /* ✅ REMOVE FOCUS LINE */
-
   transition:all 0.3s ease;
-
-  z-index:999;
-}
-
-/* also ensure icon itself has no underline */
-.floating-whatsapp i {
   text-decoration:none;
 }
 
-/* hover */
+.floating-whatsapp img {
+  width:28px;
+  height:28px;
+}
+
 .floating-whatsapp:hover {
   background:#25D366;
   transform:scale(1.15);
@@ -93,8 +72,7 @@ section {
   margin:140px auto;
   overflow:hidden;
   border-radius:20px;
-  cursor:pointer;
-  transition:transform 0.4s ease;
+  transition:0.4s;
 }
 
 .service img {
@@ -102,7 +80,6 @@ section {
   transition:0.5s;
 }
 
-/* HOVER */
 .overlay {
   position:absolute;
   top:0;
