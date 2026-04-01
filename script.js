@@ -1,11 +1,3 @@
-function openLearnMore() {
-  window.location.href = "learn.html";
-}
-
-function setLang(lang) {
-  // ready for future expansion
-}
-
 function revealElements() {
   document.querySelectorAll(".reveal").forEach(el => {
     const top = el.getBoundingClientRect().top;
