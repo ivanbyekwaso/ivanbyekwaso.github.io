@@ -19,7 +19,7 @@ body {
 header {
   position:sticky;
   top:0;
-  background:rgba(0,0,0,0.8);
+  background:rgba(0,0,0,0.7);
   backdrop-filter:blur(10px);
   padding:15px;
   text-align:center;
@@ -36,7 +36,7 @@ section {
   margin:auto;
 }
 
-/* 🔥 WHATSAPP BUTTON (FORCED FIX) */
+/* 🔥 FLOATING WHATSAPP (GLASS STYLE) */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -45,26 +45,26 @@ section {
   width:60px;
   height:60px;
 
-  display:flex !important;
+  display:flex;
   align-items:center;
   justify-content:center;
 
   border-radius:50%;
 
-  background:rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
 
   border:1px solid rgba(255,255,255,0.2);
 
   text-decoration:none;
 
-  z-index:999;
+  transition:0.3s;
 }
 
-/* FORCE IMAGE STYLE */
-.floating-whatsapp img {
-  width:30px;
-  height:30px;
-  filter:invert(1); /* turns logo white */
+/* SIMPLE ICON */
+.wa-icon {
+  font-size:22px;
+  color:white;
 }
 
 /* HOVER */
@@ -108,15 +108,30 @@ section {
   opacity:1;
 }
 
-/* BUTTON */
+/* 🔥 TRANSPARENT BUTTON */
 .btn {
   display:inline-block;
-  padding:16px 35px;
-  background:#25D366;
+  padding:14px 30px;
+
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.2);
+
   border-radius:30px;
+
   color:white;
   text-decoration:none;
+
   margin-top:40px;
+
+  transition:0.3s;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+  background:#25D366;
+  transform:scale(1.08);
 }
 
 /* TRUST */
