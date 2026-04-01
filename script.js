@@ -1,13 +1,17 @@
-const sections = document.querySelectorAll(".section");
+const cards = document.querySelectorAll(".card");
 
-function showSections() {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add("show");
+function animateCards() {
+  cards.forEach((card, index) => {
+    const top = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      setTimeout(() => {
+        card.classList.add("show");
+      }, index * 150); // stagger effect
     }
   });
 }
 
-window.addEventListener("scroll", showSections);
-window.addEventListener("load", showSections);
+window.addEventListener("scroll", animateCards);
+window.addEventListener("load", animateCards);
