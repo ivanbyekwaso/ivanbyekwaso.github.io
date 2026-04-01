@@ -12,17 +12,16 @@ header {
   background:black;
 }
 
-.hero {
+section {
+  padding:80px 20px;
   text-align:center;
-  padding:100px 20px;
-  background:linear-gradient(to bottom, black, #111);
 }
 
 .hero h2 {
   font-size:40px;
 }
 
-.whatsapp {
+.whatsapp, .book-btn {
   display:inline-block;
   margin-top:20px;
   padding:15px 25px;
@@ -30,37 +29,33 @@ header {
   border-radius:30px;
   color:white;
   text-decoration:none;
-  font-weight:bold;
 }
 
-.grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-  gap:20px;
-  padding:30px;
+.service {
+  margin:80px auto;
+  max-width:500px;
 }
 
-.grid div {
-  background:#1a1a1a;
-  padding:20px;
-  border-radius:12px;
+.service img {
+  width:100%;
+  border-radius:15px;
 }
 
-section {
-  padding:40px 20px;
-  text-align:center;
-}
-
-.socials a {
+.about-img {
+  width:250px;
   margin:10px;
-  font-size:24px;
-  color:white;
 }
 
-footer {
-  text-align:center;
-  padding:20px;
-  background:black;
+/* animations */
+.reveal {
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s ease;
+}
+
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
 }
 
 .hidden {
