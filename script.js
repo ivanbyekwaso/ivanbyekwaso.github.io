@@ -1,11 +1,13 @@
-function revealElements() {
-  document.querySelectorAll(".reveal").forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 80) {
-      el.classList.add("active");
+const sections = document.querySelectorAll(".section");
+
+function showSections() {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
     }
   });
 }
 
-window.addEventListener("scroll", revealElements);
-window.addEventListener("load", revealElements);
+window.addEventListener("scroll", showSections);
+window.addEventListener("load", showSections);
