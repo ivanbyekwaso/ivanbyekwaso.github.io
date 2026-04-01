@@ -62,22 +62,6 @@ header {
   transform:scale(1.1);
 }
 
-.card::after {
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
-  opacity:0;
-  transition:0.5s;
-}
-
-.card:hover::after {
-  opacity:1;
-}
-
 /* BUTTON */
 .btn {
   display:inline-block;
@@ -86,7 +70,6 @@ header {
   border-radius:30px;
   border:1px solid rgba(255,255,255,0.3);
   background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(10px);
   color:white;
   text-decoration:none;
   transition:0.3s;
@@ -97,11 +80,7 @@ header {
   background:rgba(255,255,255,0.15);
 }
 
-.btn:active {
-  transform:scale(0.95);
-}
-
-/* 🔥 WHATSAPP BUTTON FIXED */
+/* WHATSAPP BUTTON */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -112,7 +91,7 @@ header {
 
   display:flex;
   align-items:center;
-  justify-content:center; /* ALWAYS center */
+  justify-content:center;
 
   border-radius:50%;
   background:rgba(255,255,255,0.08);
@@ -123,7 +102,7 @@ header {
   text-decoration:none;
 }
 
-/* ICON */
+/* ICON ALWAYS CENTERED IN CIRCLE */
 .floating-whatsapp img {
   width:28px;
   height:28px;
@@ -133,32 +112,35 @@ header {
 /* TEXT */
 .cta-text {
   opacity:0;
-  margin-left:12px;
+  margin-left:10px;
   color:white;
   text-decoration:none;
   white-space:nowrap;
-  font-weight:500;
 }
 
-/* 🔥 EXPANDED STATE FIX */
+/* EXPANDED STATE */
 .floating-whatsapp.expanded {
   width:280px;
-  border-radius:30px;
+  height:60px;
 
   left:50%;
   right:auto;
-
   transform:translateX(-50%);
+
+  border-radius:30px;
 
   display:flex;
   align-items:center;
-  justify-content:center; /* KEEP CENTER */
+  justify-content:flex-start; /* LEFT align only when expanded */
 
-  gap:10px;
-
-  padding:0 20px;
+  padding-left:20px;
 
   background:#25D366;
+}
+
+/* FIX ICON POSITION INSIDE EXPANDED */
+.floating-whatsapp.expanded img {
+  margin-right:10px;
 }
 
 /* SHOW TEXT */
