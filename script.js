@@ -1,8 +1,9 @@
 const sections = document.querySelectorAll(".section");
-const whatsapp = document.querySelector(".floating-whatsapp");
+const wa = document.querySelector(".wa-container");
 
 function handleScroll() {
 
+  // section animations
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
     if (top < window.innerHeight - 100) {
@@ -10,13 +11,14 @@ function handleScroll() {
     }
   });
 
+  // whatsapp expand
   const scrollPosition = window.scrollY + window.innerHeight;
   const pageHeight = document.documentElement.scrollHeight;
 
   if (scrollPosition > pageHeight - 120) {
-    whatsapp.classList.add("expanded");
+    wa.classList.add("expanded");
   } else {
-    whatsapp.classList.remove("expanded");
+    wa.classList.remove("expanded");
   }
 }
 
