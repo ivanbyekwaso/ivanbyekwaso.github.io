@@ -1,18 +1,19 @@
-function toggleLearn() {
-  document.getElementById("learnMore").classList.toggle("hidden");
+function openLearnMore() {
+  window.location.href = "learn.html";
 }
 
 function setLang(lang) {
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.innerText = el.getAttribute(`data-${lang}`);
-  });
+  // ready for future bilingual expansion
 }
 
-window.addEventListener("scroll", () => {
+function revealElements() {
   document.querySelectorAll(".reveal").forEach(el => {
     const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if (top < window.innerHeight - 80) {
       el.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealElements);
+window.addEventListener("load", revealElements);
