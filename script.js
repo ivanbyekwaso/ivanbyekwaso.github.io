@@ -1,26 +1,26 @@
 const sections = document.querySelectorAll(".section");
 const whatsapp = document.querySelector(".floating-whatsapp");
 
-function animate() {
+function handleScroll() {
+
+  // SECTION ANIMATION
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
-
     if (top < window.innerHeight - 100) {
       sec.classList.add("show");
     }
   });
 
-  // MERGE EFFECT AT BOTTOM
-  const bottomReached = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
+  // CTA EXPANSION
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const pageHeight = document.body.offsetHeight;
 
-  if (bottomReached) {
-    whatsapp.style.bottom = "80px";
-    whatsapp.style.transform = "scale(1.2)";
+  if (scrollBottom >= pageHeight - 50) {
+    whatsapp.classList.add("expanded");
   } else {
-    whatsapp.style.bottom = "20px";
-    whatsapp.style.transform = "scale(1)";
+    whatsapp.classList.remove("expanded");
   }
 }
 
-window.addEventListener("scroll", animate);
-window.addEventListener("load", animate);
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);
