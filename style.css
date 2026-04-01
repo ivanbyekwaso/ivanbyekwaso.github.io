@@ -5,25 +5,47 @@ body {
   color:white;
 }
 
+/* HEADER */
 header {
-  position:sticky;
-  top:0;
-  background:rgba(0,0,0,0.8);
-  padding:15px;
   text-align:center;
+  padding:20px;
 }
 
-.logo img {
+.logo {
   height:50px;
 }
 
-section {
-  padding:140px 20px;
-  max-width:900px;
+/* SECTIONS */
+.section {
+  padding:100px 20px;
+  max-width:1000px;
   margin:auto;
+  text-align:center;
 }
 
-/* WHATSAPP BUTTON */
+/* GRID */
+.grid {
+  display:grid;
+  gap:40px;
+}
+
+.card img {
+  width:100%;
+  border-radius:20px;
+}
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.3);
+  text-decoration:none;
+  color:white;
+}
+
+/* WHATSAPP */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -34,71 +56,17 @@ section {
   align-items:center;
   justify-content:center;
   border-radius:50%;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.2);
-  transition:0.3s;
+  background:rgba(255,255,255,0.1);
 }
 
-.floating-whatsapp:hover {
-  background:#25D366;
-}
-
-/* SERVICES */
-.service {
-  position:relative;
-  margin:140px auto;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.service img {
-  width:100%;
-}
-
-.overlay {
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* ANIMATION */
+.section {
   opacity:0;
-  transition:0.4s;
+  transform:translateY(80px);
+  transition:1s;
 }
 
-.service:hover .overlay {
+.section.show {
   opacity:1;
-}
-
-/* BUTTON */
-.btn {
-  display:inline-block;
-  padding:14px 30px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.2);
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-  margin-top:40px;
-}
-
-/* TRUST */
-.trust-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap:40px;
-}
-
-/* CTA */
-.cta {
-  background:#111;
-  border-radius:20px;
-  padding:100px 20px;
-}
-
-/* 🔥 CRITICAL FIX */
-.reveal {
-  opacity:1 !important;
-  transform:none !important;
+  transform:translateY(0);
 }
