@@ -1,17 +1,26 @@
-const cards = document.querySelectorAll(".card");
+const sections = document.querySelectorAll(".section");
+const whatsapp = document.querySelector(".floating-whatsapp");
 
-function animateCards() {
-  cards.forEach((card, index) => {
-    const top = card.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+function animate() {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
 
-    if (top < windowHeight - 100) {
-      setTimeout(() => {
-        card.classList.add("show");
-      }, index * 150); // stagger effect
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
     }
   });
+
+  // MERGE EFFECT AT BOTTOM
+  const bottomReached = window.innerHeight + window.scrollY >= document.body.offsetHeight - 50;
+
+  if (bottomReached) {
+    whatsapp.style.bottom = "80px";
+    whatsapp.style.transform = "scale(1.2)";
+  } else {
+    whatsapp.style.bottom = "20px";
+    whatsapp.style.transform = "scale(1)";
+  }
 }
 
-window.addEventListener("scroll", animateCards);
-window.addEventListener("load", animateCards);
+window.addEventListener("scroll", animate);
+window.addEventListener("load", animate);
