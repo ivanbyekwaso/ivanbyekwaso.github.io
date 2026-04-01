@@ -26,7 +26,7 @@ section {
   font-size:42px;
 }
 
-.whatsapp {
+.whatsapp, .learn-btn {
   display:inline-block;
   margin-top:20px;
   padding:15px 25px;
@@ -64,8 +64,7 @@ section {
   transform:translateY(0);
 }
 
-/* BLOG STYLE LEARN PAGE */
-
+/* learn page */
 .learn-content {
   max-width:900px;
   margin:auto;
