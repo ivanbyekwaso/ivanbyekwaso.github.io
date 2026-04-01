@@ -39,7 +39,7 @@ header {
   gap:40px;
 }
 
-/* PREMIUM CARDS */
+/* CARDS */
 .card {
   position:relative;
   border-radius:20px;
@@ -101,7 +101,7 @@ header {
   transform:scale(0.95);
 }
 
-/* WHATSAPP */
+/* 🔥 WHATSAPP BUTTON FIXED */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -112,7 +112,7 @@ header {
 
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:center; /* ALWAYS center */
 
   border-radius:50%;
   background:rgba(255,255,255,0.08);
@@ -123,40 +123,45 @@ header {
   text-decoration:none;
 }
 
+/* ICON */
 .floating-whatsapp img {
   width:28px;
   height:28px;
+  display:block;
 }
 
-/* HOVER */
-.floating-whatsapp:hover {
-  transform:scale(1.15);
-}
-
-/* CTA TEXT */
+/* TEXT */
 .cta-text {
   opacity:0;
-  margin-left:10px;
+  margin-left:12px;
   color:white;
   text-decoration:none;
   white-space:nowrap;
+  font-weight:500;
 }
 
-/* EXPAND */
+/* 🔥 EXPANDED STATE FIX */
 .floating-whatsapp.expanded {
   width:280px;
   border-radius:30px;
 
   left:50%;
   right:auto;
+
   transform:translateX(-50%);
 
-  justify-content:flex-start;
+  display:flex;
+  align-items:center;
+  justify-content:center; /* KEEP CENTER */
+
+  gap:10px;
+
   padding:0 20px;
 
   background:#25D366;
 }
 
+/* SHOW TEXT */
 .floating-whatsapp.expanded .cta-text {
   opacity:1;
 }
