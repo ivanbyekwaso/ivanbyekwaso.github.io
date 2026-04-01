@@ -5,7 +5,7 @@ body {
   color:white;
 }
 
-/* STICKY HEADER */
+/* HEADER */
 header {
   position:sticky;
   top:0;
@@ -19,35 +19,67 @@ header {
   height:50px;
 }
 
+/* SECTIONS */
 section {
-  padding:100px 20px;
-  text-align:center;
+  padding:120px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
-/* FLOATING WHATSAPP */
+/* HERO */
+.hero h2 {
+  font-size:42px;
+}
+
+/* 🔥 FLOATING WHATSAPP (PREMIUM) */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
+
+  width:55px;
+  height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:24px;
+
+  border-radius:50%;
+
+  /* transparent glass look */
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(255,255,255,0.2);
+
+  color:white;
+
+  transition:all 0.3s ease;
+
+  z-index:999;
+}
+
+/* hover effect */
+.floating-whatsapp:hover {
   background:#25D366;
   color:white;
-  font-size:24px;
-  padding:15px;
-  border-radius:50%;
-  z-index:999;
+  transform:scale(1.1);
+  box-shadow:0 0 15px rgba(37,211,102,0.6);
 }
 
 /* SERVICES */
 .service {
   position:relative;
-  margin:100px auto;
-  max-width:500px;
+  margin:120px auto;
   overflow:hidden;
   border-radius:20px;
 }
 
 .service img {
   width:100%;
+  border-radius:20px;
   transition:0.5s;
 }
 
@@ -82,29 +114,58 @@ section {
   border-radius:30px;
   color:white;
   text-decoration:none;
-  margin-top:20px;
+  margin-top:30px;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.05);
 }
 
 /* TRUST GRID */
 .trust-grid {
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap:20px;
+  gap:30px;
+  margin-top:40px;
 }
 
 /* CTA */
 .cta {
   background:#111;
+  border-radius:20px;
+  padding:80px 20px;
 }
 
 /* ANIMATIONS */
 .reveal {
   opacity:0;
   transform:translateY(100px);
-  transition:1s;
+  transition:1s ease;
 }
 
 .reveal.active {
   opacity:1;
   transform:translateY(0);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  section {
+    padding:80px 15px;
+  }
+
+  .hero h2 {
+    font-size:28px;
+  }
+
+  .service {
+    margin:80px auto;
+  }
+
+  .btn {
+    padding:12px 25px;
+  }
+
 }
