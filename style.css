@@ -5,7 +5,6 @@ body {
   color:white;
 }
 
-/* FADE */
 .fade-in {
   animation:fadeIn 0.8s ease;
 }
@@ -15,12 +14,10 @@ body {
   to {opacity:1;}
 }
 
-/* HEADER */
 header {
   position:sticky;
   top:0;
   background:rgba(0,0,0,0.8);
-  backdrop-filter:blur(10px);
   padding:15px;
   text-align:center;
 }
@@ -29,59 +26,43 @@ header {
   height:50px;
 }
 
-/* SECTIONS */
 section {
   padding:140px 20px;
   max-width:900px;
   margin:auto;
 }
 
-/* 🔥 FLOATING BUTTON */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
-
   width:60px;
   height:60px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   border-radius:50%;
-
   background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-
   border:1px solid rgba(255,255,255,0.2);
-
-  transition:0.3s;
 }
 
-/* hover */
 .floating-whatsapp:hover {
   background:#25D366;
-  transform:scale(1.15);
 }
 
-/* SERVICES */
 .service {
   position:relative;
   margin:140px auto;
-  overflow:hidden;
   border-radius:20px;
+  overflow:hidden;
 }
 
 .service img {
   width:100%;
-  transition:0.5s;
 }
 
 .overlay {
   position:absolute;
-  top:0;
-  left:0;
   width:100%;
   height:100%;
   background:rgba(0,0,0,0.6);
@@ -89,45 +70,40 @@ section {
   align-items:center;
   justify-content:center;
   opacity:0;
-  transition:0.5s;
-}
-
-.service:hover img {
-  transform:scale(1.1);
+  transition:0.4s;
 }
 
 .service:hover .overlay {
   opacity:1;
 }
 
-/* BUTTON */
 .btn {
   display:inline-block;
   padding:14px 30px;
-
   background:rgba(255,255,255,0.08);
   border:1px solid rgba(255,255,255,0.2);
-
   border-radius:30px;
-
   color:white;
   text-decoration:none;
-
   margin-top:40px;
 }
 
-/* CTA */
+.trust-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap:40px;
+}
+
 .cta {
   background:#111;
   border-radius:20px;
   padding:100px 20px;
 }
 
-/* ANIMATION */
 .reveal {
   opacity:0;
   transform:translateY(120px);
-  transition:1.2s ease;
+  transition:1s;
 }
 
 .reveal.active {
