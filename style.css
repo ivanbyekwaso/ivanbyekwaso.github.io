@@ -3,7 +3,6 @@ body {
   font-family:'Poppins', sans-serif;
   background:#0a0a0a;
   color:white;
-  overflow-x:hidden;
 }
 
 /* HEADER */
@@ -24,7 +23,7 @@ header {
   text-align:center;
 
   opacity:0;
-  transform:translateY(80px);
+  transform:translateY(60px);
   transition:1s ease;
 }
 
@@ -41,24 +40,24 @@ header {
 
 /* CARDS */
 .card {
-  transition:0.4s ease;
+  transition:0.4s;
 }
 
 .card img {
   width:100%;
   border-radius:20px;
-  transition:0.5s ease;
+  transition:0.5s;
 }
 
 .card:hover {
-  transform:translateY(-12px);
+  transform:translateY(-10px);
 }
 
 .card:hover img {
   transform:scale(1.08);
 }
 
-/* BUTTON (GLASS) */
+/* BUTTON */
 .btn {
   display:inline-block;
   margin-top:20px;
@@ -66,17 +65,11 @@ header {
   border-radius:30px;
   border:1px solid rgba(255,255,255,0.3);
   background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(10px);
   color:white;
   text-decoration:none;
-  transition:0.3s;
 }
 
-.btn:hover {
-  background:rgba(255,255,255,0.15);
-}
-
-/* 🔥 WHATSAPP BUTTON */
+/* WHATSAPP BUTTON */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
@@ -98,7 +91,9 @@ header {
 
   transition:all 0.4s ease;
 
-  overflow:hidden;
+  text-decoration:none;
+  color:white;
+
   z-index:999;
 }
 
@@ -107,34 +102,26 @@ header {
   height:28px;
 }
 
-/* TEXT */
-.cta-text {
-  opacity:0;
-  margin-left:10px;
-  white-space:nowrap;
-  transition:0.3s;
-}
-
 /* EXPANDED CTA */
 .floating-whatsapp.expanded {
-  width:260px;
+  width:280px;
   border-radius:30px;
+  left:50%;
+  right:auto;
+  transform:translateX(-50%);
   justify-content:flex-start;
   padding:0 20px;
   background:#25D366;
 }
 
+.cta-text {
+  opacity:0;
+  margin-left:10px;
+  white-space:nowrap;
+  color:white;
+  text-decoration:none;
+}
+
 .floating-whatsapp.expanded .cta-text {
   opacity:1;
-}
-
-/* FLOAT EFFECT */
-.floating-whatsapp {
-  animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform:translateY(0); }
-  50% { transform:translateY(-6px); }
-  100% { transform:translateY(0); }
 }
