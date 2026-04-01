@@ -3,7 +3,6 @@ body {
   font-family:'Poppins', sans-serif;
   background:#0a0a0a;
   color:white;
-  scroll-behavior:smooth;
 }
 
 /* FADE */
@@ -37,33 +36,41 @@ section {
   margin:auto;
 }
 
-/* WHATSAPP BUTTON */
+/* 🔥 WHATSAPP BUTTON (FORCED FIX) */
 .floating-whatsapp {
   position:fixed;
   bottom:20px;
   right:20px;
+
   width:60px;
   height:60px;
-  display:flex;
+
+  display:flex !important;
   align-items:center;
   justify-content:center;
+
   border-radius:50%;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
+
+  background:rgba(255,255,255,0.1);
+
   border:1px solid rgba(255,255,255,0.2);
-  transition:all 0.3s ease;
+
   text-decoration:none;
+
+  z-index:999;
 }
 
+/* FORCE IMAGE STYLE */
 .floating-whatsapp img {
-  width:28px;
-  height:28px;
+  width:30px;
+  height:30px;
+  filter:invert(1); /* turns logo white */
 }
 
+/* HOVER */
 .floating-whatsapp:hover {
   background:#25D366;
   transform:scale(1.15);
-  box-shadow:0 0 20px rgba(37,211,102,0.7);
 }
 
 /* SERVICES */
@@ -72,7 +79,6 @@ section {
   margin:140px auto;
   overflow:hidden;
   border-radius:20px;
-  transition:0.4s;
 }
 
 .service img {
@@ -98,10 +104,6 @@ section {
   transform:scale(1.1);
 }
 
-.service:hover {
-  transform:translateY(-10px);
-}
-
 .service:hover .overlay {
   opacity:1;
 }
@@ -115,11 +117,6 @@ section {
   color:white;
   text-decoration:none;
   margin-top:40px;
-  transition:0.3s;
-}
-
-.btn:hover {
-  transform:scale(1.08);
 }
 
 /* TRUST */
@@ -127,7 +124,6 @@ section {
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
   gap:40px;
-  margin-top:50px;
 }
 
 /* CTA */
@@ -147,10 +143,4 @@ section {
 .reveal.active {
   opacity:1;
   transform:translateY(0);
-}
-
-/* MOBILE */
-@media (max-width:768px) {
-  section { padding:90px 15px; }
-  .hero h2 { font-size:28px; }
 }
