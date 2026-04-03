@@ -1,168 +1,68 @@
-body {
-  margin:0;
-  font-family:'Poppins', sans-serif;
-  background:#0a0a0a;
-  color:white;
-  overflow-x:hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* HEADER */
-header {
-  text-align:center;
-  padding:20px;
-}
+<title>Ivan Byekwaso</title>
 
-.logo {
-  height:50px;
-}
+<link rel="stylesheet" href="style.css?v=final">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-/* SECTIONS */
-.section {
-  padding:120px 20px;
-  max-width:1000px;
-  margin:auto;
-  text-align:center;
+</head>
 
-  opacity:0;
-  transform:translateY(60px);
-  transition:1s ease;
-}
+<body>
 
-.section.show {
-  opacity:1;
-  transform:translateY(0);
-}
+<a href="https://wa.me/4915566238085" class="wa-button" target="_blank">
+  <svg viewBox="0 0 32 32">
+    <path fill="white" d="M16 .4C7.2.4 0 7.6 0 16.4c0 2.8.7 5.5 2 7.8L0 32l8.3-2.2c2.3 1.3 4.9 2 7.7 2 8.8 0 16-7.2 16-16S24.8.4 16 .4z"/>
+  </svg>
+  <span>Contact on WhatsApp</span>
+</a>
 
-/* GRID */
-.grid {
-  display:grid;
-  gap:40px;
-}
+<header>
+  <img src="logo.png" class="logo">
+</header>
 
-/* CARDS */
-.card {
-  position:relative;
-  border-radius:20px;
-  overflow:hidden;
-  transition:0.4s;
-}
+<section class="section">
+  <h1>Elite Personal Coaching</h1>
+  <p>Transform your body, mindset and performance</p>
+</section>
 
-.card img {
-  width:100%;
-  border-radius:20px;
-  transition:0.6s;
-}
+<section class="section grid">
+  <div class="card"><img src="service2.jpg"><h3>1-on-1 Training</h3></div>
+  <div class="card"><img src="service3.jpg"><h3>Group Training</h3></div>
+  <div class="card"><img src="service4.jpg"><h3>Long-term Programs</h3></div>
+</section>
 
-.card:hover {
-  transform:translateY(-12px) scale(1.02);
-  box-shadow:0 20px 50px rgba(0,0,0,0.6);
-}
+<section class="section">
+  <h2>About Ivan</h2>
+  <a href="learn.html" class="btn">Learn More</a>
+</section>
 
-.card:hover img {
-  transform:scale(1.1);
-}
+<section class="section">
+  <h2>Start Your Transformation Today</h2>
+</section>
 
-/* GLOW */
-.card::after {
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
-  opacity:0;
-  transition:0.5s;
-}
+<section class="section social">
+  <p>Email: <a href="mailto:ivanbyekwa1@gmail.com">ivanbyekwa1@gmail.com</a></p>
 
-.card:hover::after {
-  opacity:1;
-}
+  <div class="social-icons">
+    <a href="https://www.facebook.com/mruganda1/" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">
+    </a>
+    <a href="https://www.instagram.com/mrugandaivan" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">
+    </a>
+    <a href="https://www.tiktok.com/@mruganda5x" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg">
+    </a>
+    <a href="https://www.youtube.com/@ivanbyekwaso9659" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg">
+    </a>
+  </div>
+</section>
 
-/* BUTTON */
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  border-radius:30px;
-  border:1px solid rgba(255,255,255,0.3);
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(10px);
-  color:white;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.btn:hover {
-  transform:scale(1.08);
-  background:rgba(255,255,255,0.15);
-}
-
-.btn:active {
-  transform:scale(0.95);
-}
-
-/* WHATSAPP SYSTEM */
-.wa-container {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-
-  display:flex;
-  align-items:center;
-
-  height:60px;
-
-  text-decoration:none;
-  z-index:999;
-}
-
-/* ICON */
-.wa-icon {
-  width:60px;
-  height:60px;
-
-  border-radius:50%;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.2);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  transition:0.3s;
-}
-
-.wa-icon img {
-  width:28px;
-  height:28px;
-}
-
-/* TEXT */
-.wa-text {
-  opacity:0;
-  margin-left:12px;
-  color:white;
-  font-weight:500;
-  white-space:nowrap;
-  transition:0.3s;
-}
-
-/* EXPAND */
-.wa-container.expanded {
-  left:50%;
-  right:auto;
-  transform:translateX(-50%);
-}
-
-.wa-container.expanded .wa-icon {
-  border-radius:30px;
-  width:auto;
-  padding:0 20px;
-  background:#25D366;
-}
-
-.wa-container.expanded .wa-text {
-  opacity:1;
-}
+<script src="script.js"></script>
+</body>
+</html>
