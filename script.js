@@ -1,20 +1,51 @@
-const sections = document.querySelectorAll(".section");
-const wa = document.querySelector(".wa-button");
-
-function handleScroll() {
-
-  sections.forEach(sec => {
-    if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
-      sec.classList.add("show");
-    }
-  });
-
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
-    wa.classList.add("expanded");
-  } else {
-    wa.classList.remove("expanded");
-  }
+function openWhatsApp(){
+window.open("https://wa.me/4915566238085","_blank");
 }
 
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("load", handleScroll);
+// ADVANCED SCROLL ENGINE
+window.addEventListener("scroll", () => {
+
+const scrollY = window.scrollY;
+
+document.querySelectorAll(".service").forEach((el, i) => {
+const rect = el.getBoundingClientRect();
+
+```
+if(rect.top < window.innerHeight){
+  el.classList.add("visible");
+}
+
+// Parallax depth
+el.style.transform = `translateY(${scrollY * 0.05 * (i+1)}px)`;
+```
+
+});
+
+// WhatsApp expand
+const wa = document.getElementById("waExpand");
+const bottom = window.innerHeight + scrollY >= document.body.offsetHeight - 50;
+
+if(bottom){
+wa.style.bottom = "30px";
+} else {
+wa.style.bottom = "-120px";
+}
+
+});
+
+// LANGUAGE
+function setLang(lang){
+document.querySelectorAll("[data-de]").forEach(el=>{
+el.innerText = el.getAttribute("data-"+lang);
+});
+}
+
+setLang("de");
+
+// PAGE TRANSITION
+document.body.style.opacity = 0;
+
+window.onload = () => {
+document.body.style.transition = "opacity 1s ease";
+document.body.style.opacity = 1;
+};
